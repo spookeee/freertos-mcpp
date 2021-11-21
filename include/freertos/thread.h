@@ -206,10 +206,10 @@ namespace freertos
 
         /// @brief  Empty delete operator, since the destructor does the memory freeing
         ///         if the object was dynamically allocated
-        void operator delete(void *p)
+        void operator delete(void*)
         {
         }
-        void operator delete[](void *p)
+        void operator delete[](void*)
         {
         }
 

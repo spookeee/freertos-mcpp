@@ -46,6 +46,7 @@ void scheduler::start()
 {
     // this call doesn't return
     vTaskStartScheduler();
+    while (true);
 }
 
 size_t scheduler::get_threads_count()

@@ -69,6 +69,7 @@ using namespace freertos::native;
 
     static void pend_redirect_0(void *arg1, std::uint32_t arg2)
     {
+        static_cast<void>(arg2);
         auto func = reinterpret_cast<pend_function_0>(arg1);
         func();
     }

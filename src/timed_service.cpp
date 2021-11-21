@@ -48,7 +48,7 @@ using namespace freertos::native;
     timed_service::timed_service(function func, void *arg, tick_timer::duration period, bool periodic, const char *name)
     {
         configASSERT(!this_cpu::is_in_isr());
-        xTimerCreateStatic(DEFAULT_NAME, to_ticks(period), periodic, arg,
+        xTimerCreateStatic(name, to_ticks(period), periodic, arg,
                 reinterpret_cast<TimerCallbackFunction_t>(func), this);
     }
 
